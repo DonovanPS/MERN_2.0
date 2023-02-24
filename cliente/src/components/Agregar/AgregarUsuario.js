@@ -28,8 +28,15 @@ function AgregarUsuario() {
             ocupacion: ocupacion,
             idusuario: uniquid()
         }   
+
+        const config = {
+            headers: {
+              "ngrok-skip-browser-warning": true,
+            }
+        }
+    
         
-        axios.post('/api/usuario/agregarusuario', usuario)
+        axios.post('/api/usuario/agregarusuario', usuario, config)
             .then(res => {
                 setShowMessage(true)
             })
