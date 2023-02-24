@@ -36,6 +36,8 @@ const ngrokRun = async () => {
             return new Error('Ngrok Failed');
         }
     });
+
+    console.log(ngrok.getUrl());
 }
 
 ngrokRun();
