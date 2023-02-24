@@ -7,7 +7,13 @@ import axios from 'axios';
 function UsuarioIndividual({ usuarios }) {
 
   function deleteDB(id){
-   axios.delete('/api/usuario/borrarusuario/'+id)
+    const config = {
+      headers: {
+        "ngrok-skip-browser-warning": true,
+      }
+    }
+
+   axios.delete('/api/usuario/borrarusuario/'+id, config)
    .then(res => {
        alert(res.data)
    })

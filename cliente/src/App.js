@@ -10,8 +10,6 @@ import "primeicons/primeicons.css";
 import './App.css';
 import ListaUsuarios from './components/ListaUsuarios';
 import AgregarUsuario from './components/Agregar/AgregarUsuario';
-import Txt from "./components/Txt";
-import TextFile from "./components/TextFile";
 
 function App() {
   return (
@@ -19,8 +17,6 @@ function App() {
 
       <h1>CRUD USUARIOS CON MERN</h1>
 
-      <Txt/>
-      <TextFile/>
       <AgregarUsuario />
       <ListaUsuarios />
 
