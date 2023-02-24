@@ -24,8 +24,8 @@ app.listen(5000,function(){
     console.log('Escuchando')
 })
 
-const ngrokRun = async () => {
-    await ngrok.authtoken('2LnOnYtyo4oPqRbCzvARl53ltgm_kGpov8Eo4dV73NHNC6ZQ');
+/*const ngrokRun = async () => {
+    await ngrok.authtoken('2LSqWoFUnZ7Qqi1uIX9ThP0X4Us_7qJ4WSssQVPUrSw3EDCBy');
 
     await ngrok.connect({
         proto : 'http',
@@ -36,8 +36,7 @@ const ngrokRun = async () => {
             return new Error('Ngrok Failed');
         }
     });
-
     console.log(ngrok.getUrl());
 }
 
-ngrokRun();
+ngrokRun();*/

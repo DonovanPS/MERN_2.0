@@ -19,8 +19,17 @@ function App() {
 
       <h1>CRUD USUARIOS CON MERN</h1>
 
-      <Txt/>
-      <TextFile/>
+    <br/>
+    <iframe id="inlineFrameExample"
+    title="Inline Frame Example"
+    width="300"
+    height="200"
+    src="https://drive.google.com/file/d/1MsKI22E5KlYJQUGOMmEKSFAOmaN9s2gp/preview?usp=sharing">
+</iframe>
+
+
+    <br/>
+    <br/>
       <AgregarUsuario />
       <ListaUsuarios />
 
