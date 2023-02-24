@@ -7,8 +7,13 @@ function ListaUsuarios(){
     const[datausuarios, setdatausuario]=useState([])
 
     useEffect(()=>{
-      axios.get('api/usuario/obtenerusuarios').then(res => {
-        //console.log(res.data)
+      const config = {
+        headers: {
+          "ngrok-skip-browser-warning": true,
+        }
+      }
+
+      axios.get('api/usuario/obtenerusuarios', config).then(res => {
         setdatausuario(res.data)
       }).catch(err =>{
         console.log(err)
