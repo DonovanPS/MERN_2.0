@@ -100,13 +100,14 @@ drive.files.get({fileId: fileId, alt: 'media'}, {responseType: 'stream'}, (err, 
     const content = Buffer.concat(chunks).toString('utf8');
     //console.log('Contenido del archivo:', content);
     contenido=content;
+    //console.log(contenido);
     
   });
 });
 setTimeout(() => {
     res.send(contenido)
 
-  }, 1000);
+  }, 2000);
 })   
 
 
@@ -135,3 +136,31 @@ router.delete('/borrarusuario/:id', (req,res) =>{
         }
     })
 })
+
+//Consultar por id
+router.get('/obtenerindividual/:id', (req,res) =>{
+  const id = req.params['id'];
+  ModeloUsuario.findOne({idusuario: id}, function(err, doc){
+      if(!err){
+          res.send(doc)
+      }else{
+          res.send(err)
+      }
+  })
+})
+
+//Actualizar
+router.put('/actuaizarusuario/:id',(req, res) =>{
+  const id = req.params.id;
+  const update = req.body;
+
+  ModeloUsuario.findOneAndUpdate({ idusuario: id }, update, { new: true }, (err, doc) => {
+    if (err) {
+      console.log('Error al actualizar el usuario:', err);
+      res.send(err);
+    } else {
+      //console.log('Usuario actualizado:', doc);
+      res.send('Usuario actualizado');
+    }
+  });
+});
