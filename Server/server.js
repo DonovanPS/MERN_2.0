@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const ngrok = require('ngrok');
 
+
 //importar body parser
 const bodyParser = require('body-parser')
 app.use(bodyParser.json());
@@ -24,7 +25,7 @@ app.listen(5000,function(){
     console.log('Escuchando')
 })
 
-/*const ngrokRun = async () => {
+const ngrokRun = async () => {
     await ngrok.authtoken('2LSqWoFUnZ7Qqi1uIX9ThP0X4Us_7qJ4WSssQVPUrSw3EDCBy');
 
     await ngrok.connect({
@@ -39,4 +40,4 @@ app.listen(5000,function(){
     console.log(ngrok.getUrl());
 }
 
-ngrokRun();*/
+ngrokRun();

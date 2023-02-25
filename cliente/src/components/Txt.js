@@ -1,21 +1,22 @@
-import React, { useState, useEffect } from "react";
+import axios from "axios";
+import React, { useState } from "react";
 
 function Txt() {
-  const [text, setText] = useState("");
 
-  useEffect(() => {
-    fetch("./file.txt")
-      .then((response) => response.text())
-      .then((data) => setText(data));
-  }, []);
+  const[datatex, setdatatex]=useState([])
+  axios.get('api/usuario/obtenertxt').then(res => {
+    setdatatex(res.data)
+  }).catch(err =>{
+    console.log(err)
+  })
 
   return (
 
     <div>
 
       <h2>Txt</h2>
-      {console.log(text)}
-      <p>{text}</p>
+      
+      <p>{datatex}</p>
     </div>
   );
 }

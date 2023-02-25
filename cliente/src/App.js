@@ -10,6 +10,7 @@ import "primeicons/primeicons.css";
 import './App.css';
 import ListaUsuarios from './components/ListaUsuarios';
 import AgregarUsuario from './components/Agregar/AgregarUsuario';
+import Txt from './components/Txt';
 
 function App() {
   return (
@@ -18,16 +19,10 @@ function App() {
       <h1>CRUD USUARIOS CON MERN</h1>
 
     <br/>
-    <iframe id="inlineFrameExample"
-    title="Inline Frame Example"
-    width="300"
-    height="200"
-    src="https://drive.google.com/file/d/1MsKI22E5KlYJQUGOMmEKSFAOmaN9s2gp/preview?usp=sharing">
-</iframe>
-
-
+   <Txt/>
     <br/>
     <br/>
+    
       <AgregarUsuario />
       <ListaUsuarios />
 
