@@ -4,6 +4,14 @@ const router = express.Router()
 const mongoose = require('mongoose')
 const eschema = mongoose.Schema
 
+
+const { google} = require('googleapis');
+const { content } = require('googleapis/build/src/apis/content');
+const key = require('../json/credenciales.json');
+const scopes = 'https://www.googleapis.com/auth/drive';
+
+let contenido = "";
+
 //require('../drive')
 
 const eschemausuario = new eschema({
@@ -42,12 +50,7 @@ router.post('/agregarusuario',(req, res) =>{
 //obtener txt
 router.get('/obtenertxt', (req,res) =>{
 
-const { google} = require('googleapis');
-const { content } = require('googleapis/build/src/apis/content');
-const key = require('../json/credenciales.json');
-const scopes = 'https://www.googleapis.com/auth/drive';
 
-let contenido = "";
 
 
 const auth = new google.auth.JWT(
@@ -107,7 +110,7 @@ drive.files.get({fileId: fileId, alt: 'media'}, {responseType: 'stream'}, (err, 
 setTimeout(() => {
     res.send(contenido)
 
-  }, 2000);
+  }, 3000);
 })   
 
 

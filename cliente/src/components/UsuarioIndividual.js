@@ -93,19 +93,10 @@ function UsuarioIndividual({ usuarios }) {
     }).then(err => {
         console.log(err)
       })
-    console.log("actualizando bb");
-    console.log(iduser);
-    console.log(nombre);
-    console.log(apellido);
-    console.log(ocupacion);
 
   }
 
   useEffect(() => {
-    console.log(iduser);
-    console.log(nombre);
-    console.log(apellido);
-    console.log(ocupacion);
 
   }, [nombre], [apellido], [ocupacion],[iduser]);
 
