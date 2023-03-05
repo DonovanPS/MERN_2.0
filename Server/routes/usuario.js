@@ -110,7 +110,7 @@ drive.files.get({fileId: fileId, alt: 'media'}, {responseType: 'stream'}, (err, 
 setTimeout(() => {
     res.send(contenido)
 
-  }, 3000);
+  }, 1000);
 })   
 
 
